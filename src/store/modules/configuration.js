@@ -33,13 +33,17 @@ const configuration = {
     },
     getConfiguration(context) {
       return new Promise((resolve, reject) => {
-        context.dispatch('fetchApiData').then(() => {
+        if (Object.keys(context.state.images).length) {
           resolve();
-        }).catch((error) => {
-          // eslint-disable-next-line no-console
-          console.log(error.message);
-          reject(error);
-        });
+        } else {
+          context.dispatch('fetchApiData').then(() => {
+            resolve();
+          }).catch((error) => {
+            // eslint-disable-next-line no-console
+            console.log(error.message);
+            reject(error);
+          });
+        }
       });
     },
   },

@@ -21,7 +21,7 @@ export default {
     'app-footer': AppFooter,
     'app-header': AppHeader,
   },
-  mounted: function mountedSearchResult() {
+  mounted: function mountedApp() {
     store.dispatch('configuration/getConfiguration');
   },
 };
