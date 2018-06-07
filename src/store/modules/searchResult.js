@@ -29,6 +29,7 @@ const searchResult = {
           const results = json.results.map((result) => {
             const newResult = {
               ...result,
+              image_path: (result.media_type === 'person' ? result.profile_path : result.poster_path),
               name: (result.media_type === 'movie' ? result.title : result.name),
               url: `https://www.themoviedb.org/${result.media_type}/${result.id}/`,
             };
