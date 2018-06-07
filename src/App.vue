@@ -1,23 +1,24 @@
-<template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
-  </div>
+<template lang="pug">
+  #app.container-fluid
+    .justify-content-center.row
+      .col-12.col-md-10
+        app-header
+        router-view
+        app-disclaimer
+        app-footer
 </template>
 
 <script>
+import AppDisclaimer from '@/components/AppDisclaimer';
+import AppFooter from '@/components/AppFooter';
+import AppHeader from '@/components/AppHeader';
+
 export default {
   name: 'App',
+  components: {
+    'app-disclaimer': AppDisclaimer,
+    'app-footer': AppFooter,
+    'app-header': AppHeader,
+  },
 };
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
