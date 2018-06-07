@@ -14,12 +14,20 @@ export default {
     'list-movies': ListMovies,
   },
   computed: {
+    currentRegion() {
+      return store.state.regions.current;
+    },
     movies() {
-      return store.getters['moviesNowPlaying/inRegion']('BR');
+      return store.getters['moviesNowPlaying/inRegion'](this.currentRegion);
     },
   },
   mounted: function mountedMoviesNowPlaying() {
-    store.dispatch('moviesNowPlaying/getMovies', 'BR');
+    store.dispatch('moviesNowPlaying/getMovies', this.currentRegion);
+  },
+  watch: {
+    currentRegion: function watchCurrentRegion() {
+      store.dispatch('moviesNowPlaying/getMovies', this.currentRegion);
+    },
   },
 };
 </script>
