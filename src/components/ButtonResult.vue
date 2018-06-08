@@ -1,8 +1,8 @@
 <template lang="pug">
-  a.btn.btn-secondary.btn-block(:href='item.url', target='_blank')
+  router-link.btn.btn-secondary.btn-block(:to='targetRoute')
     .no-gutters.row
       .col-4.pr-3
-        responsive-image(:alt='item.name', :path='item.image_path', :type='item.item_type')
+        responsive-image(:alt='item.name', :path='item.image_path', :type='item.media_type')
       .col-8.text-left.text-truncate= '{{ item.name }}'
 </template>
 
@@ -14,6 +14,21 @@ export default {
   props: ['item'],
   components: {
     'responsive-image': ResponsiveImage,
+  },
+  computed: {
+    targetRoute() {
+      const pageNames = {
+        movie: 'PageMovie',
+        person: 'PagePerson',
+        tv: 'PageTv',
+      };
+      return {
+        name: pageNames[this.item.media_type],
+        params: {
+          id: this.item.id,
+        },
+      };
+    },
   },
 };
 </script>

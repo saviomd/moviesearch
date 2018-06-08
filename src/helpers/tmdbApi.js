@@ -7,7 +7,9 @@ const tmdbApi = {
   movieDetails: movieId => `${apiBaseUrl}movie/${movieId}?${apiKey}`,
   moviesNowPlaying: region => `${apiBaseUrl}movie/now_playing?${apiKey}&region=${region}`,
   moviesUpcoming: region => `${apiBaseUrl}movie/upcoming?${apiKey}&region=${region}`,
+  personDetails: personId => `${apiBaseUrl}person/${personId}?${apiKey}`,
   searchMulti: searchQuery => `${apiBaseUrl}search/multi?${apiKey}&query=${searchQuery}`,
+  tvDetails: showId => `${apiBaseUrl}tv/${showId}?${apiKey}`,
 };
 
 export default tmdbApi;
