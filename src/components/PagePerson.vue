@@ -1,5 +1,8 @@
 <template lang="pug">
   div(v-if='person')
+    .row.mb-3
+      .col-6.col-md-4
+        responsive-image(:alt='person.title', :path='person.profile_path', type='person')
     h1.h3= '{{ person.name }}'
     .mb-3= '{{ person.biography }}'
     ul.list-unstyled.text-right
@@ -12,10 +15,14 @@
 </template>
 
 <script>
+import ResponsiveImage from '@/components/ResponsiveImage';
 import store from '@/store';
 
 export default {
   name: 'PageMovie',
+  components: {
+    'responsive-image': ResponsiveImage,
+  },
   computed: {
     person() {
       const person = store.getters['personDetails/person'](this.$route.params.id);

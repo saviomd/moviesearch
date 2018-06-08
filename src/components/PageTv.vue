@@ -1,5 +1,8 @@
 <template lang="pug">
   div(v-if='show')
+    .row.mb-3
+      .col-6.col-md-4
+        responsive-image(:alt='show.title', :path='show.poster_path', type='show')
     h1.h3= '{{ show.name }}'
     .mb-3= '{{ show.overview }}'
     ul.list-unstyled.text-right
@@ -10,10 +13,14 @@
 </template>
 
 <script>
+import ResponsiveImage from '@/components/ResponsiveImage';
 import store from '@/store';
 
 export default {
   name: 'PageTv',
+  components: {
+    'responsive-image': ResponsiveImage,
+  },
   computed: {
     show() {
       const show = store.getters['tvDetails/show'](this.$route.params.id);

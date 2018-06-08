@@ -1,5 +1,8 @@
 <template lang="pug">
   div(v-if='movie')
+    .row.mb-3
+      .col-6.col-md-4
+        responsive-image(:alt='movie.title', :path='movie.poster_path', type='movie')
     h1.h3= '{{ movie.title }}'
     h2.h5= '{{ movie.tagline }}'
     .mb-3= '{{ movie.overview }}'
@@ -13,10 +16,14 @@
 </template>
 
 <script>
+import ResponsiveImage from '@/components/ResponsiveImage';
 import store from '@/store';
 
 export default {
   name: 'PageMovie',
+  components: {
+    'responsive-image': ResponsiveImage,
+  },
   computed: {
     movie() {
       const movie = store.getters['movieDetails/movie'](this.$route.params.id);
