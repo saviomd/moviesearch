@@ -23,15 +23,8 @@ const moviesUpcoming = {
           }
           return response.json();
         }).then((json) => {
-          const results = json.results.map((result) => {
-            const newResult = {
-              ...result,
-              url: `https://www.themoviedb.org/movie/${result.id}/`,
-            };
-            return newResult;
-          });
           const payload = {
-            results,
+            results: json.results,
             region,
           };
           context.commit('populateRegion', payload);
