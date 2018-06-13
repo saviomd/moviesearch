@@ -10,7 +10,7 @@
 import ResponsiveImage from '@/components/ResponsiveImage';
 
 export default {
-  name: 'ListMovies',
+  name: 'LinkMovie',
   props: ['movie'],
   components: {
     'responsive-image': ResponsiveImage,
