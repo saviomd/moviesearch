@@ -18,9 +18,9 @@ export default {
   computed: {
     targetRoute() {
       const pageNames = {
-        movie: 'PageMovie',
-        person: 'PagePerson',
-        tv: 'PageTv',
+        movie: 'Movie',
+        person: 'Person',
+        tv: 'Tv',
       };
       return {
         name: pageNames[this.item.media_type],

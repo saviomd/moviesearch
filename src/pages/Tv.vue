@@ -6,7 +6,7 @@
 import TvDetails from '@/components/TvDetails';
 
 export default {
-  name: 'PageTv',
+  name: 'Tv',
   components: {
     'tv-details': TvDetails,
   },

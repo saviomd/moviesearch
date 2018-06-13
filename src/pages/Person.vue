@@ -6,7 +6,7 @@
 import PersonDetails from '@/components/PersonDetails';
 
 export default {
-  name: 'PagePerson',
+  name: 'Person',
   components: {
     'person-details': PersonDetails,
   },

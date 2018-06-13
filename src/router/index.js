@@ -1,11 +1,11 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import PageHome from '@/components/PageHome';
-import PageMovie from '@/components/PageMovie';
-import PageNotFound from '@/components/PageNotFound';
-import PagePerson from '@/components/PagePerson';
-import PageSearchResult from '@/components/PageSearchResult';
-import PageTv from '@/components/PageTv';
+import Home from '@/pages/Home';
+import Movie from '@/pages/Movie';
+import NotFound from '@/pages/NotFound';
+import Person from '@/pages/Person';
+import SearchResult from '@/pages/SearchResult';
+import Tv from '@/pages/Tv';
 
 Vue.use(Router);
 
@@ -13,33 +13,33 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'PageHome',
-      component: PageHome,
+      name: 'Home',
+      component: Home,
     },
     {
       path: '/movie/:id',
-      name: 'PageMovie',
-      component: PageMovie,
+      name: 'Movie',
+      component: Movie,
     },
     {
       path: '/person/:id',
-      name: 'PagePerson',
-      component: PagePerson,
+      name: 'Person',
+      component: Person,
     },
     {
       path: '/search',
-      name: 'PageSearchResult',
-      component: PageSearchResult,
+      name: 'SearchResult',
+      component: SearchResult,
     },
     {
       path: '/tv/:id',
-      name: 'PageTv',
-      component: PageTv,
+      name: 'Tv',
+      component: Tv,
     },
     {
       path: '*',
-      name: 'PageNotFound',
-      component: PageNotFound,
+      name: 'NotFound',
+      component: NotFound,
     },
   ],
 });

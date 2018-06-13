@@ -14,7 +14,7 @@ import MoviesUpcoming from '@/components/MoviesUpcoming';
 import ToggleRegion from '@/components/ToggleRegion';
 
 export default {
-  name: 'PageHome',
+  name: 'Home',
   components: {
     'form-search': FormSearch,
     'movies-now-playing': MoviesNowPlaying,

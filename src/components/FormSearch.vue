@@ -24,7 +24,7 @@ export default {
       event.preventDefault();
       const searchString = this.searchString.trim().toLowerCase();
       store.dispatch('searchResult/getResult', searchString).then(() => {
-        router.push({ name: 'PageSearchResult', query: { q: searchString } });
+        router.push({ name: 'SearchResult', query: { q: searchString } });
       });
     },
   },

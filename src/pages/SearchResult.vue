@@ -9,7 +9,7 @@ import FormSearch from '@/components/FormSearch';
 import SearchResult from '@/components/SearchResult';
 
 export default {
-  name: 'PageSearchResult',
+  name: 'SearchResult',
   components: {
     'form-search': FormSearch,
     'search-result': SearchResult,

@@ -6,7 +6,7 @@
 import MovieDetails from '@/components/MovieDetails';
 
 export default {
-  name: 'PageMovie',
+  name: 'Movie',
   components: {
     'movie-details': MovieDetails,
   },

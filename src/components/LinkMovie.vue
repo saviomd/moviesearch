@@ -18,7 +18,7 @@ export default {
   computed: {
     targetRoute() {
       return {
-        name: 'PageMovie',
+        name: 'Movie',
         params: {
           id: this.movie.id,
         },
