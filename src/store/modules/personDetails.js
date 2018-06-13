@@ -1,4 +1,4 @@
-import tmdbApi from '@/helpers/tmdbApi';
+import tmdbApi from '@/utils/tmdbApi';
 
 const personDetails = {
   namespaced: true,

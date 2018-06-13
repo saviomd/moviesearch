@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import tmdbApi from '@/helpers/tmdbApi';
+import tmdbApi from '@/utils/tmdbApi';
 
 export default {
   name: 'AppDisclaimer',
