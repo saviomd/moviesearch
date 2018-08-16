@@ -11,7 +11,9 @@ import ResponsiveImage from '@/components/ResponsiveImage';
 
 export default {
   name: 'ButtonResult',
-  props: ['item'],
+  props: {
+    item: { type: Object, required: true },
+  },
   components: {
     'responsive-image': ResponsiveImage,
   },

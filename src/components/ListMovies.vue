@@ -10,7 +10,9 @@ import LinkMovie from '@/components/LinkMovie';
 
 export default {
   name: 'ListMovies',
-  props: ['movies'],
+  props: {
+    movies: { type: Array, required: true },
+  },
   components: {
     'link-movie': LinkMovie,
   },

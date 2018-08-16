@@ -11,7 +11,9 @@ import ResponsiveImage from '@/components/ResponsiveImage';
 
 export default {
   name: 'LinkMovie',
-  props: ['movie'],
+  props: {
+    movie: { type: Object, required: true },
+  },
   components: {
     'responsive-image': ResponsiveImage,
   },

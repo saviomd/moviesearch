@@ -18,7 +18,9 @@ import store from '@/store';
 
 export default {
   name: 'TvDetails',
-  props: ['id'],
+  props: {
+    id: { type: [Number, String], required: true },
+  },
   components: {
     'responsive-image': ResponsiveImage,
   },

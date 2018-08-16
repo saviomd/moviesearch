@@ -2,7 +2,7 @@
   div(v-if='person')
     .row.mb-3
       .col-6.col-md-4
-        responsive-image(:alt='person.title', :path='person.profile_path', type='person')
+        responsive-image(:alt='person.name', :path='person.profile_path', type='person')
     h1.h3= '{{ person.name }}'
     .mb-3= '{{ person.biography }}'
     ul.list-unstyled.text-right
@@ -20,7 +20,9 @@ import store from '@/store';
 
 export default {
   name: 'PersonDetails',
-  props: ['id'],
+  props: {
+    id: { type: [Number, String], required: true },
+  },
   components: {
     'responsive-image': ResponsiveImage,
   },

@@ -11,7 +11,11 @@ import store from '@/store';
 
 export default {
   name: 'ResponsiveImage',
-  props: ['alt', 'path', 'type'],
+  props: {
+    alt: { type: String, required: true },
+    path: { type: String },
+    type: { type: String, required: true },
+  },
   computed: {
     src() {
       const images = store.state.configuration.images;
