@@ -1,36 +1,36 @@
 <template lang="pug">
-  router-link.btn.btn-secondary.btn-block(:to='targetRoute')
+  router-link.btn.btn-secondary.btn-block(:to="targetRoute")
     .no-gutters.row
       .col-4.pr-3
-        responsive-image(:alt='item.name', :path='item.image_path', :type='item.media_type')
-      .col-8.text-left.text-truncate= '{{ item.name }}'
+        responsive-image(:alt="item.name", :path="item.image_path", :type="item.media_type")
+      .col-8.text-left.text-truncate= "{{ item.name }}"
 </template>
 
 <script>
-import ResponsiveImage from '@/components/ResponsiveImage';
+import ResponsiveImage from "@/components/ResponsiveImage";
 
 export default {
-  name: 'ButtonResult',
+  name: "ButtonResult",
   props: {
-    item: { type: Object, required: true },
+    item: { type: Object, required: true }
   },
   components: {
-    'responsive-image': ResponsiveImage,
+    "responsive-image": ResponsiveImage
   },
   computed: {
     targetRoute() {
       const pageNames = {
-        movie: 'Movie',
-        person: 'Person',
-        tv: 'Tv',
+        movie: "Movie",
+        person: "Person",
+        tv: "Tv"
       };
       return {
         name: pageNames[this.item.media_type],
         params: {
-          id: this.item.id,
-        },
+          id: this.item.id
+        }
       };
-    },
-  },
+    }
+  }
 };
 </script>

@@ -9,20 +9,20 @@
 </template>
 
 <script>
-import AppDisclaimer from '@/components/AppDisclaimer';
-import AppFooter from '@/components/AppFooter';
-import AppHeader from '@/components/AppHeader';
-import store from '@/store';
+import AppDisclaimer from "@/components/AppDisclaimer";
+import AppFooter from "@/components/AppFooter";
+import AppHeader from "@/components/AppHeader";
+import store from "@/store";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    'app-disclaimer': AppDisclaimer,
-    'app-footer': AppFooter,
-    'app-header': AppHeader,
+    "app-disclaimer": AppDisclaimer,
+    "app-footer": AppFooter,
+    "app-header": AppHeader
   },
   mounted: function mountedApp() {
-    store.dispatch('configuration/getConfiguration');
-  },
+    store.dispatch("configuration/getConfiguration");
+  }
 };
 </script>
