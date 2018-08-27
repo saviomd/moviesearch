@@ -4,15 +4,15 @@ self.__precacheManifest = [
     "url": "/moviesearch/robots.txt"
   },
   {
-    "revision": "bb6a63598767bd5931eb",
-    "url": "/moviesearch/js/chunk-vendors.4c8c6d61.js"
+    "revision": "31c4a335bbefc3fa9c39",
+    "url": "/moviesearch/js/chunk-vendors.c67e7d42.js"
   },
   {
-    "revision": "026dea7de7b130632ac5",
-    "url": "/moviesearch/js/app.eacb1309.js"
+    "revision": "07ea725b2d3ea91c380c",
+    "url": "/moviesearch/js/app.25ae2037.js"
   },
   {
-    "revision": "523757ab78539c96340a9b456d75bf0b",
+    "revision": "5f1ba251338689d684299824af5e06b4",
     "url": "/moviesearch/index.html"
   },
   {
@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "/moviesearch/img/appicon.png"
   },
   {
-    "revision": "026dea7de7b130632ac5",
+    "revision": "07ea725b2d3ea91c380c",
     "url": "/moviesearch/css/app.04ce7fd9.css"
   }
 ];

@@ -3,7 +3,9 @@
     responsive-image(:alt="movie.title", :path="movie.poster_path", type="movie")
     .row
       .col= "{{ movie.release_date }}"
-      .col-auto= "{{ movie.vote_average }}"
+      .col-auto
+        = "{{ movie.vote_average }}"
+        font-awesome-icon.ml-1.text-warning(:icon="['fas', 'star']")
 </template>
 
 <script>

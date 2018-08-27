@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox-sw.js");
 
 importScripts(
-  "/moviesearch/precache-manifest.5a361ff2db05c7a55bea0527af91e292.js"
+  "/moviesearch/precache-manifest.e34c2190dd9bb45283ab5563804e53eb.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "moviesearch"});

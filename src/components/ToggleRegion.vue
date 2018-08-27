@@ -5,10 +5,11 @@
       :class=`(region === currentRegion ? "active" : "")`,
       :key="region",
       @click="updateCurrentRegion(region)",
-    )= "{{ region }}"
+    )= "{{ emojis(`flag-${region}`) }}"
 </template>
 
 <script>
+import emojis from "@/utils/emojis";
 import store from "@/store";
 
 export default {
@@ -22,6 +23,7 @@ export default {
     }
   },
   methods: {
+    emojis: emoji => emojis(emoji),
     updateCurrentRegion: region => {
       store.dispatch("regions/setCurrent", region);
     }

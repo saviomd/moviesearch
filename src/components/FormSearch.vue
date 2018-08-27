@@ -5,7 +5,8 @@
         placeholder="Movies, people and tv series...",
         type="search", v-model="searchString")
       .input-group-append
-        button.btn.btn-danger(type="submit")= "Search"
+        button.btn.btn-danger(type="submit")
+          font-awesome-icon(:icon="['fas', 'search']")
 </template>
 
 <script>
