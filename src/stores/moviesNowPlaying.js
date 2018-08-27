@@ -1,3 +1,4 @@
+import sortBy from "lodash/sortBy";
 import tmdbApi from "@/utils/tmdbApi";
 
 const moviesNowPlaying = {
@@ -26,7 +27,7 @@ const moviesNowPlaying = {
           })
           .then(json => {
             const payload = {
-              results: json.results,
+              results: sortBy(json.results, "release_date").reverse(),
               region
             };
             context.commit("populateRegion", payload);
